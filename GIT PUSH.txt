@@ -1,0 +1,160 @@
+GIT PUSH
+Microsoft Windows [Version 10.0.22621.2283]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\harsh\Desktop\DemoGit>git clone https://github.com/RaviTambade/CPP.git
+Cloning into 'CPP'...
+remote: Enumerating objects: 158, done.
+remote: Counting objects: 100% (158/158), done.
+remote: Compressing objects: 100% (111/111), done.
+remote: Total 158 (delta 78), reused 120 (delta 43), pack-reused 0
+Receiving objects: 100% (158/158), 27.88 KiB | 921.00 KiB/s, done.
+Resolving deltas: 100% (78/78), done.
+
+C:\Users\harsh\Desktop\DemoGit>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\harsh\Desktop\DemoGit>git init harsh1
+Initialized empty Git repository in C:/Users/harsh/Desktop/DemoGit/harsh1/.git/
+
+C:\Users\harsh\Desktop\DemoGit>cd harsh1
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git add .
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Screenshot 2023-10-18 020959.png
+
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git config --global user.email "papalkarhar@gmail.com"
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git config --global user.name "Harshaa"
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Screenshot 2023-10-18 020959.png
+
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git commit -m "Hello first commit"
+[master (root-commit) 42e9885] Hello first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Screenshot 2023-10-18 020959.png
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git config --global user.name "shorttree"
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git commit -m "Hello first commit"
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git remote add harsh1 https://github.com/shorttree/Demo.git
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git push harsh1
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 39.48 KiB | 3.04 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/shorttree/Demo/pull/new/master
+remote:
+To https://github.com/shorttree/Demo.git
+ * [new branch]      master -> master
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>git push --set -upstream harsh1 master
+error: unknown switch `p'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --force-if-includes   require remote updates to be integrated locally
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+C:\Users\harsh\Desktop\DemoGit\harsh1>
